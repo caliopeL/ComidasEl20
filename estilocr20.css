@@ -1,0 +1,198 @@
+/* estilos.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fdf7f0;
+    color: #333;
+}
+
+header {
+    background-color: #002b5c;
+    color: white;
+    padding: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 2px 10px #b45353 
+}
+
+.logo {
+    height: 5px;
+    
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 0em;
+    padding: 0;
+    justify-content: center;
+    margin: 0px;
+    background-color: #3a58ab;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    text-align: justify;
+    font-weight: lighter;
+    display: flex;
+
+}
+nav li{
+    background-color: #305586;
+    margin: 4px;
+    display: inline-block;
+    border-radius: 1px;
+    cursor: cell;
+    transition: background-color 0.3s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+nav li :hover{
+    background-color: #b45353;
+    transform: translateY(-3px);
+}
+section {
+    padding: 1cm;
+    border-bottom: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 20px;
+    box-shadow: 0px 2px 10px #c6a3a3 
+    
+}
+
+h2 {
+    color: #c62828;
+    position: relative;
+
+   
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    max-width: 400px;
+}
+
+input, textarea, button {
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #002b5c;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #c62828; }
+
+footer {
+    background-color: #001a5c;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    position: relative;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin: 3px 0;
+    border-radius: 8px;
+
+}
+h1{
+    text-align: center;
+    padding: 1em;
+    position: relative;
+    box-shadow: 0px 2px 10px #ff7e7e 
+}
+/*DISEÑO RESPONSIVO (Dispositivos móviles)*/
+@media (max-width: 600px){
+    nav ul{
+        flex-direction: column;
+    }
+
+    nav li{
+        margin: 0;
+    }
+    header {
+        margin: 0;
+    }
+     .logo img {
+        height: 60px; /* se reduce el logo */
+        margin-bottom: 10px;}
+.tarjeta{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    flex: 1px;
+    min-width: 120px;
+    border-radius: 16px;
+
+}
+}
+.CARTA {
+  padding: 40px;
+  background-color: #f8f8f8;
+  text-align: center;
+}
+
+.CARTA img {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  margin: 10px;
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: inline-block;
+}
+
+.CARTA img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Para disposición tipo grilla */
+.CARTA {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+.pedido-contacto {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.contacto,
+.domicilio {
+  flex: 1 1 45%;
+}
+.carta-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+}
+
+.carta-scroll img {
+  flex: 0 0 auto;
+  width: 400px;
+  height: auto;
+  scroll-snap-align: start;
+  border-radius: 12px;
+}
